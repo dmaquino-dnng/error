@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÿ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <button class="pixel-btn start-btn" onclick="showMessage()">
+            <b> Problem detected: </b> Click here to know more
+        </button>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <div id="myModal" class="pixel-window">
+        <div class="pixel-title-bar">
+            <span>System Error</span>
+            <button class="pixel-close" onclick="closeMessage()">X</button>
+        </div>
+        <div class="pixel-window-body">
+            <div class="content-wrapper">
+                <div class="pixel-heart">⚠️</div>
+                <div class="pixel-text">
+                    <p>i miss u <br> :< </p>
+                </div>
+            </div>
+            <div class="button-row">
+                <button class="pixel-btn ok-btn" onclick="closeMessage()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('myModal').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closeMessage() {
+            document.getElementById('myModal').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
